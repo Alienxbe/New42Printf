@@ -6,7 +6,7 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 17:55:45 by mykman            #+#    #+#             */
-/*   Updated: 2021/05/24 14:16:44 by mykman           ###   ########.fr       */
+/*   Updated: 2021/07/24 02:14:00 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int	ft_get_flags(const char **format)
 	pos = ft_strchr(FLAGS, **format);
 	while (pos)
 	{
-		flags |= 1 << (pos - FLAGS);
+		flags |= 1 << (pos - FLAGS + 1);
 		pos = ft_strchr(FLAGS, *++*format);
 	}
 	return (flags);

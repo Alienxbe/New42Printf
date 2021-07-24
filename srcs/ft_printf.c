@@ -6,7 +6,7 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 17:21:31 by mykman            #+#    #+#             */
-/*   Updated: 2021/05/29 23:20:55 by mykman           ###   ########.fr       */
+/*   Updated: 2021/07/24 01:22:42 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	ft_conversion(const char **format, t_print **type_table, va_list args)
 	length = (*type_table[tag->type])(tag, args);
 	free(tag);
 	if (length < 0)
-		return (MALLOC_ERROR);
+		return (length);
 	return (length);
 }
 

@@ -6,7 +6,7 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 17:22:25 by mykman            #+#    #+#             */
-/*   Updated: 2021/05/29 23:27:14 by mykman           ###   ########.fr       */
+/*   Updated: 2021/07/24 02:14:04 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,14 @@
 # define MALLOC_ERROR		-1
 # define TAG_BUILD_ERROR	-2
 
-# define FLAG_ZERO			1
-# define FLAG_MINUS			2
-# define FLAG_PRECISION		4
+# define FLAG_PRECISION		1
+# define FLAG_ZERO			2
+# define FLAG_MINUS			4
 # define FLAG_HASHTAG		8
 # define FLAG_SPACE			16
 # define FLAG_PLUS			32
-# define FLAGS				"0-P# +"
-# define TYPES				"cspdiuoxX%"
+# define FLAGS				"0-# +"
+# define TYPES				"cspdiuxX%"
 # define NULL_STR			"(null)"
 # define BASE_DECI			"0123456789"
 # define BASE_OCTAL			"01234567"
@@ -69,5 +69,12 @@ int		ft_type_p(t_tag *tag, va_list args);
 int		ft_type_d(t_tag *tag, va_list args);
 int		ft_type_ubase(t_tag *tag, va_list args);
 int		ft_type_pct(t_tag *tag, va_list args);
+
+/*
+** Utils functions
+*/
+
+char	*ft_ctoa(char c);
+char	*ft_ultoa_base(unsigned long n, int minsize, char *base);
 
 #endif

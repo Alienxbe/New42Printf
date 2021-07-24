@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_ctoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/03 20:34:49 by mykman            #+#    #+#             */
-/*   Updated: 2021/07/24 02:20:16 by mykman           ###   ########.fr       */
+/*   Created: 2021/07/23 21:29:26 by mykman            #+#    #+#             */
+/*   Updated: 2021/07/23 21:30:51 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
-#include <stdio.h>
+#include "ft_printf.h"
 
-int main(void)
+char	*ft_ctoa(char c)
 {
-	printf("system    ->|%-.10d|\n", 152);
-	ft_printf("yours     ->|%-.10d|\n", 152);
-	return 0;
+	char	*s;
+
+	s = (char *)ft_calloc(sizeof(char), 2);
+	if (s)
+		*s = c;
+	return (s);
 }
