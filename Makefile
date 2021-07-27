@@ -6,7 +6,7 @@
 #    By: mykman <mykman@student.s19.be>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/01 20:00:35 by mykman            #+#    #+#              #
-#    Updated: 2021/07/23 21:52:45 by mykman           ###   ########.fr        #
+#    Updated: 2021/07/27 22:09:05 by mykman           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ SRCS		=	ft_printf.c \
 				ft_type_ubase.c \
 				ft_type_pct.c
 SRCS_UTILS	=	ft_ultoa_base.c \
+				ft_printf_itoa.c \
 				ft_ctoa.c
 
 OBJS		=	$(addprefix srcs/, ${SRCS:.c=.o})
@@ -39,6 +40,8 @@ $(NAME):	${OBJS} ${OBJS_UTILS}
 	@ar -rcs $@ $^
 
 all:	${NAME}
+
+bonus:	all
 
 clean:
 	@rm -rf ${OBJS} ${OBJS_UTILS}

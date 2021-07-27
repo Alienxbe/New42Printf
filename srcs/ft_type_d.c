@@ -6,7 +6,7 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 10:39:41 by mykman            #+#    #+#             */
-/*   Updated: 2021/07/24 01:03:27 by mykman           ###   ########.fr       */
+/*   Updated: 2021/07/27 21:38:39 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ int	ft_type_d(t_tag *tag, va_list args)
 		pos_sign_char = '+';
 	else if (tag->flags & FLAG_SPACE)
 		pos_sign_char = ' ';
-	return (ft_print_type(tag, ft_itoa(n, tag->prec, pos_sign_char)));
+	return (ft_print_type(tag, ft_printf_itoa(n, tag->prec, pos_sign_char)));
 }

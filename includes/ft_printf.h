@@ -6,7 +6,7 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 17:22:25 by mykman            #+#    #+#             */
-/*   Updated: 2021/07/24 02:14:04 by mykman           ###   ########.fr       */
+/*   Updated: 2021/07/27 21:36:38 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,7 @@ int		ft_type_pct(t_tag *tag, va_list args);
 */
 
 char	*ft_ctoa(char c);
+char	*ft_printf_itoa(int n, int minsize, char pos_sign_char);
 char	*ft_ultoa_base(unsigned long n, int minsize, char *base);
 
 #endif

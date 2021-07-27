@@ -6,7 +6,7 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 20:34:49 by mykman            #+#    #+#             */
-/*   Updated: 2021/07/24 02:20:16 by mykman           ###   ########.fr       */
+/*   Updated: 2021/07/27 22:02:28 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,14 @@
 
 int main(void)
 {
-	printf("system    ->|%-.10d|\n", 152);
-	ft_printf("yours     ->|%-.10d|\n", 152);
+	int n[] = {125, 125, 125, -125, -125, -125, 356};
+	int width[] = {10, 10, 10, 10, 10, 10, 10};
+	int minsize[] = {0, 3, 5, 0, 3, 5, 15};
+	for (int i = 0; i < 7; i++)
+	{
+		printf("Test %d:\n", i);
+		printf("%-10s -> %d\n", "Original", printf("|%+*.*d|\n", width[i], minsize[i], n[i]));
+		ft_printf("%-10s -> %d\n\n", "Yours", ft_printf("|%+*.*d|\n", width[i], minsize[i], n[i]));
+	}
 	return 0;
 }
